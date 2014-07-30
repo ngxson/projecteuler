@@ -10,7 +10,6 @@ class First {
 	*/
 	
 	public static void main(String[] arguments) {
-		System.out.println("hello");
 	    double count = 0;
 	    double sum = 0;
 	    //MAX NUMBER HERE:
