@@ -20,27 +20,16 @@ class PrimeNumber {
 	
 	public static int getPrimeNumber(int term) {
 		int count = 1;
-		int i = 2;
-			while(count <= term) {
-				if(isPrime(i)) {
-					System.out.print("count=" + count);
-					System.out.println("    value=" + i);
-					count = count + 1;
-				}//print out if isPrime=true
-				i = i + 1;
-			}
+		int i;
+			for(i=2; count <= term; i++)
+				if(isPrime(i)) count = count + 1;
 		return (i - 1);
 	}
 	
 	public static Boolean isPrime(int i) {
 		int maxDiv = (int) Math.sqrt((double)i);
-		int div = 2;
-		while (div <= maxDiv) {
-			if(i % div == 0) {
-				return false;
-			}
-			div = div + 1;
-		}
+		for(int div = 2; div <= maxDiv; div++)
+			if(i % div == 0) return false;
 		return true;
 	}
 }

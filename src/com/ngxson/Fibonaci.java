@@ -19,23 +19,15 @@ class Fibonaci {
 		int fibo1 = 1;
 		int fibo2 = 1;
 		int count = 1;
-		int fibo3 = 0;
 		int sum = 0;
 		int result = 0;
-		while(fibo3 < max) {
+		while(fibo2 < max) {
 			count = count +1;
-			fibo3 = fibo1 + fibo2;
-			if (fibo3 < max) {
-				fibo1 = fibo2;
-				fibo2 = fibo3;
-				sum = sum + fibo3;
-				System.out.print("count= "+count+"    value="+fibo3 + "    sum="+sum);
-				//result
-				if((fibo3 % 2) == 0) {
-					result = result + fibo3;
-				}
-				System.out.println("    answer="+result);
-			}
+			int temp = fibo1 + fibo2;
+			fibo1 = fibo2;
+			fibo2 = temp;
+			sum = sum + fibo2;
+			if((fibo2 % 2) == 0) result = result + fibo2; //result
 		}
 		System.out.println("answer="+result);
 	}
