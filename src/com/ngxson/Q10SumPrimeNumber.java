@@ -16,10 +16,10 @@ class Q10SumPrimeNumber{
 		long sum = 0;
 		long startTime = System.currentTimeMillis();
 			for(int i=2 ; i<maxNumber ; i++) {
-				if(PrimeNumber.isPrime(i)) {
+				if(Utils.isPrime(i)) {
 					sum = sum + i;
 					count = count+1;
-				}//print out if isPrime=true
+				}
 			}
 		long endTime   = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
